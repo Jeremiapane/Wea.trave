@@ -1,0 +1,659 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;1,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+/* scrollbar */
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    background: #3CBAB1;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.452);
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: rgb(177, 237, 233);
+}
+
+ul,
+li,
+a {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+a {
+    cursor: pointer;
+}
+
+#navBar {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    z-index: 5;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.062);
+}
+
+.container {
+    padding: 20px 50px;
+}
+
+.nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-nav-col {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo a {
+    margin-right: 38px;
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.nav-links ul,
+.nav-links li {
+    display: flex;
+    flex-direction: row;
+    margin-right: 53px;
+}
+
+.right-nav-col {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.right-nav-col ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.right-nav-col ul li {
+    margin-left: 53px;
+}
+
+#header {
+    display: flex;
+    height: 768px;
+    padding: 0px 50px;
+    background-image: url(img/header-bg.jpg);
+    background-blend-mode: multiply;
+    background-size: cover;
+}
+
+#header::before {
+    height: 768px;
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(48, 148, 162, 0.4));
+    z-index: 1;
+}
+
+.header-left-col {
+    width: 50%;
+    padding-top: 250px;
+    color: white;
+    z-index: 2;
+}
+
+.heading h1 {
+    margin-bottom: 30px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 110%;
+}
+
+.desc p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 120%;
+    margin-bottom: 28px;
+}
+
+.search-bar {
+    color: white;
+    width: 420px;
+    height: 45px;
+    background: rgba( 255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(105, 176, 185, 0.37);
+    backdrop-filter: blur( 10px);
+    -webkit-backdrop-filter: blur( 10px);
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18);
+}
+
+.search-bar form input {
+    width: 90%;
+    padding: 10px;
+    height: 45px;
+    background: transparent;
+    border: 0;
+    color: white;
+}
+
+input::placeholder {
+    color: rgb(255, 255, 255);
+    opacity: 1;
+    font-size: 14px;
+}
+
+button {
+    background: transparent;
+    color: white;
+    border: 0;
+    width: 30px;
+    height: 30px;
+}
+
+.header-right-col {
+    display: grid;
+    width: 50%;
+    color: white;
+    z-index: 2;
+}
+
+.weather-widget {
+    position: absolute;
+    padding-top: 100px;
+    width: 230px;
+    color: white;
+    background: transparent;
+    right: 50px;
+}
+
+.img-slider {
+    overflow-x: hidden;
+    padding: 0;
+    position: relative;
+    cursor: pointer;
+}
+
+.img-slider h4 {
+    padding: 300px 0 0 50px;
+    font-size: 24px;
+    font-weight: 300;
+    position: relative;
+}
+
+.items {
+    position: relative;
+    width: 100%;
+    margin: 30px 0 0 50px;
+    display: flex;
+    flex-direction: row;
+}
+
+.show {
+    margin-top: -5px !important;
+    height: 320px !important;
+}
+
+.item,
+.item img {
+    position: relative;
+    width: 234px;
+    height: 300px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.item:first-child {
+    break-before: always;
+}
+
+.item-title {
+    width: 172px;
+    height: 44px;
+    position: absolute;
+    bottom: 8px;
+    left: 5px;
+    z-index: 2;
+}
+
+.before-btn {
+    position: absolute;
+    left: 0;
+    top: 50%;
+}
+
+.arrow {
+    top: 65%;
+}
+
+.after-btn {
+    position: absolute;
+    right: 0;
+    top: 50%;
+}
+
+.block {
+    background-color: #3CBAB1;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    /* Full height */
+    position: absolute;
+    top: -50px;
+    height: 100px;
+    width: 100%;
+    z-index: 2;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#explore {
+    background-image: linear-gradient(rgba(60, 186, 177, 1), rgba(60, 186, 177, 1));
+    position: relative;
+}
+
+.first-row {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.first-row h3 {
+    font-size: 40px;
+    color: white;
+    font-weight: 500;
+}
+
+.first-row p {
+    margin-top: 20px;
+    font-weight: 200;
+    font-size: 20px;
+    color: white;
+    width: 1079px;
+    height: 112px;
+}
+
+.card-items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    position: relative;
+    width: 420px;
+    height: 310px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.card img {
+    border-radius: 10px;
+    background-size: cover;
+    width: 100%;
+    height: 310px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: black;
+    opacity: 0.3;
+}
+
+.card-title a {
+    color: white;
+    font-size: 32px;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* trip-info */
+
+#trip-info {
+    z-index: 2;
+    position: relative;
+    background-color: white;
+}
+
+.circle {
+    padding: 0;
+    margin: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.top {
+    top: 0;
+}
+
+.bottom {
+    top: 100%;
+}
+
+.first-row-info {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.first-row-info h4 {
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+}
+
+.first-row-info p {
+    margin-top: 20px;
+    font-weight: 300;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    width: 481px;
+    height: 112px;
+}
+
+.sec-row-info,
+.banners {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner {
+    position: relative;
+    display: flex;
+    width: 233px;
+    height: 400px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.banner img {
+    border-radius: 10px;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: black;
+    opacity: 0.3;
+}
+
+.banner-title {
+    width: 172px;
+    text-align: left;
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    top: 90%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+
+#booking {
+    background-color: #3CBAB1;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+#booking h3 {
+    padding-top: 50px;
+    font-size: 40px;
+    color: white;
+    font-weight: 400;
+}
+
+.booking-banner {
+    background-image: url(img/banner.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    width: 1095px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+.booking-banner h4 {
+    position: absolute;
+    width: 486px;
+    font-size: 32px;
+    font-weight: 300;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.booking-banner .button {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    top: 85%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 45px;
+    background-color: #3CBAB1;
+}
+
+hr {
+    color: white;
+}
+
+
+/* footer */
+
+#footer {
+    background-color: #3CBAB1;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.first-col-footer,
+.sec-col-footer,
+.third-col-footer,
+.fourth-col-footer {
+    width: 25%;
+    margin: 50px;
+    color: white;
+}
+
+.first-col-footer p {
+    width: 330px;
+    text-align: justify;
+    padding-top: 10px;
+}
+
+.social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.icon {
+    padding-top: 25px;
+    margin-right: 10px;
+}
+
+.third-col-footer ul {
+    padding-top: 25px;
+}
+
+.third-col-footer ul li {
+    margin-bottom: 15px;
+}
+
+.fourth-col-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding-top: 25px;
+}
+
+
+/* explore page */
+
+.hero {
+    padding: 100px 50px;
+    width: 100%;
+    z-index: 2;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 64px;
+    font-weight: 400;
+}
+
+.hero p {
+    font-size: 24px;
+}
+
+.product {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.prod-card {
+    margin: 0 10px;
+    height: 300px;
+    width: 230px;
+    position: relative;
+    background-image: linear-gradient(90deg, #3CBAB1, #3cbab2b0, rgba(255, 255, 255, 0.596));
+    border-radius: 10px;
+}
+
+.prod-card img {
+    height: 230px;
+    width: 100%;
+    background-size: cover;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.prod-card-title {
+    font-size: 20px;
+    font-weight: 400;
+    position: absolute;
+    left: 20px;
+    bottom: 10%;
+}
+
+.primary {
+    height: 370px;
+}
+
+.primary img {
+    height: 300px;
+}
+
+.primary .prod-card-title {
+    font-size: 30px;
+    bottom: 5%;
+}
+
+#trip-idea {
+    z-index: 2;
+    position: relative;
+    background-color: white;
+}
+
+#trip-idea h1 {
+    margin-top: 50px;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.banner-title-trip {
+    text-align: left;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+}
+
+.btnMore {
+    position: absolute;
+    bottom: 10%;
+    width: 50%;
+    left: 5%;
+    text-align: left;
+}
