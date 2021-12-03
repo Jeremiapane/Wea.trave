@@ -82,7 +82,7 @@ a {
 .logo a {
     margin-right: 38px;
     color: white;
-    font-size: 24px;
+    font-size: 26px;
     font-weight: 500;
 }
 
@@ -225,10 +225,11 @@ button {
     flex-direction: row;
 }
 
-.show {
+
+/* .show {
     margin-top: -5px !important;
     height: 320px !important;
-}
+} */
 
 .item,
 .item img {
@@ -339,6 +340,8 @@ button {
     position: absolute;
     top: 0;
     left: 0;
+    padding: 0;
+    margin: 0;
     width: 100%;
     height: 100%;
     border-radius: 10px;
@@ -373,6 +376,7 @@ button {
     background-color: white;
     position: absolute;
     left: 50%;
+    z-index: 5;
     transform: translate(-50%, -50%);
 }
 
@@ -430,17 +434,6 @@ button {
     width: 100%;
     height: 400px;
     object-fit: cover;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    background-color: black;
-    opacity: 0.3;
 }
 
 .banner-title {
@@ -591,13 +584,28 @@ hr {
     position: relative;
 }
 
+.slick-track {
+    align-items: center;
+    justify-content: center;
+}
+
+.slick-slide.prod-card img {
+    height: 300px;
+}
+
+
+/* .slick-center.prod-card img {
+    height: 320px;
+} */
+
 .prod-card {
     margin: 0 10px;
     height: 300px;
     width: 230px;
     position: relative;
     background-image: linear-gradient(90deg, #3CBAB1, #3cbab2b0, rgba(255, 255, 255, 0.596));
-    border-radius: 10px;
+    /* border-radius: 10px; */
+    cursor: pointer;
 }
 
 .prod-card img {
@@ -605,7 +613,7 @@ hr {
     width: 100%;
     background-size: cover;
     object-fit: cover;
-    border-radius: 10px;
+    /* border-radius: 10px; */
 }
 
 .prod-card-title {
@@ -636,7 +644,7 @@ hr {
 }
 
 #trip-idea h1 {
-    margin-top: 50px;
+    margin: 50px 0 0 100px;
     font-size: 30px;
     font-weight: 500;
 }
@@ -656,4 +664,150 @@ hr {
     width: 50%;
     left: 5%;
     text-align: left;
+}
+
+.city-header-left-col {
+    display: grid;
+    width: 70%;
+    color: white;
+    z-index: 2;
+    text-align: justify;
+}
+
+.city {
+    background-color: #3CBAB1 !important;
+}
+
+#city-header {
+    height: 700px;
+    width: 100%;
+    background-color: white;
+    padding: 80px 50px;
+    position: relative;
+}
+
+.background {
+    position: relative;
+    height: 477px;
+}
+
+.background img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-size: cover;
+    object-fit: cover;
+    background-position: top;
+    border-radius: 10px;
+}
+
+.city-desc {
+    position: absolute;
+    top: 50%;
+    width: 50%;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: justify;
+    padding-left: 20px;
+    color: white;
+}
+
+.city-weather-widget {
+    position: absolute;
+    top: 10%;
+    right: 0;
+    width: 20%;
+}
+
+.gallery {
+    position: absolute;
+    width: 100%;
+    top: 85%;
+    gap: 18px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.gallery-card,
+.gallery-card img {
+    height: 150px;
+    width: 308px;
+    background-size: cover;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+#forecast-touristSite {
+    display: flex;
+    position: relative;
+    padding: 10px 50px;
+}
+
+.forecast {
+    width: 50%;
+}
+
+.forecast h1 {
+    font-weight: 400;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.forecast a {
+    width: 210px;
+    border-radius: 10px;
+}
+
+.touristSite {
+    width: 50%;
+    margin-bottom: 100px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.touristSite h4 {
+    font-size: 36px;
+    font-weight: 400;
+    padding-left: 20px;
+}
+
+.sites {
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site,
+.site img {
+    width: 233px;
+    height: 397px;
+    border-radius: 10px;
+    position: relative;
+    background-size: cover;
+    object-fit: cover;
+}
+
+.site-title {
+    position: absolute;
+    top: 80%;
+    color: white;
+    left: 10px;
+}
+
+.details {
+    text-align: justify;
+    padding-left: 20px;
+}
+
+.site-arrow-btn {
+    color: #3CBAB1;
 }
