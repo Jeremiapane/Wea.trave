@@ -8,6 +8,10 @@
     <title>Wea.trave</title>
 
     <link rel="stylesheet" href="all.css">
+
+    <!-- JS Plugin -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 </head>
 
 <body>
@@ -56,7 +60,7 @@
             </div>
             <div class="sec-row">
                 <div class="product">
-                    <div class="before-btn"><i class="fas fa-caret-left fa-2x"></i></div>
+                    <!-- <div class="before-btn"><i class="fas fa-caret-left fa-2x"></i></div> -->
                     <div class="prod-card">
                         <img src="img/Danau Toba.jpg" alt="">
                         <div class="prod-card-title">Danau Toba</div>
@@ -65,9 +69,9 @@
                         <img src="img/Pulau Natuna.webp" alt="">
                         <div class="prod-card-title">Pulau Natuna</div>
                     </div>
-                    <div class="prod-card primary">
+                    <div class="prod-card" onclick="window.location.href='city.html'">
                         <img src="img/Aceh.jpg" alt="">
-                        <div class="prod-card-title">Aceh</div>
+                        <a href="city.html" class="prod-card-title">Aceh</a>
                     </div>
                     <div class="prod-card ">
                         <img src="img/Kelumbayan Shark.jpg" alt="">
@@ -77,7 +81,7 @@
                         <img src="img/Batam.jpg" alt="">
                         <div class="prod-card-title">Batam</div>
                     </div>
-                    <div class="after-btn"><i class="fas fa-caret-right fa-2x"></i></div>
+                    <!-- <div class="after-btn"><i class="fas fa-caret-right fa-2x"></i></div> -->
                 </div>
             </div>
         </div>
@@ -89,8 +93,9 @@
 
     <section id="trip-idea">
         <div class="circle top"></div>
+        <h1>Sumatera Trip Idea</h1>
         <div class="container">
-            <h1>Sumatera Trip Idea</h1>
+
             <div class="banners">
                 <div class="banner">
                     <div class="overlay"></div>
@@ -225,6 +230,37 @@
     </script>
 
 
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Slick JS -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.product').slick({
+                centerMode: true,
+                centerPadding: '60px',
+                slidesToShow: 3,
+                responsive: [{
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 3
+                    }
+                }, {
+                    breakpoint: 480,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 1
+                    }
+                }]
+            });
+        });
+    </script>
 </body>
 
 </html>
