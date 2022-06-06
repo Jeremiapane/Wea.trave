@@ -271,8 +271,8 @@ button {
 
 .block {
     background-color: #3CBAB1;
-    filter: blur(8px);
-    -webkit-filter: blur(8px);
+    filter: blur(1px);
+    -webkit-filter: blur(1px);
     /* Full height */
     position: absolute;
     top: -50px;
